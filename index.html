@@ -3,153 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Scan Library — Bill of Fare</title>
+<title>Scan Library List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Nunito:wght@700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#f4ecdc; --paper2:#ebe0ca; --ink:#2b2118; --soft:#6b5a48; --rule:#b59a6a; --wine:#7a1f23;
-}
+:root{--bg:#fbfbfa;--ink:#1d1d1d;--soft:#8a8a8a;--accent:#f0960e;--chip:#f1efeb;--line:#e6e3dd}
 *{box-sizing:border-box}
-html{background:#3a2c22}
-body{margin:0;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;line-height:1.35;
-  background:#3a2c22 radial-gradient(ellipse at top,#4a382b,#2a1f18);padding:32px 16px 64px}
-.menu{max-width:760px;margin:0 auto;background:var(--paper);
-  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.45),transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(150,110,60,.12),transparent 55%);
-  padding:56px clamp(20px,6vw,72px) 64px;box-shadow:0 20px 60px rgba(0,0,0,.5);position:relative}
-.menu::before{content:"";position:absolute;inset:14px;border:1px solid var(--rule);pointer-events:none}
-.menu::after{content:"";position:absolute;inset:19px;border:3px double var(--rule);pointer-events:none;opacity:.6}
-header{text-align:center}
-.est{font-family:"Playfair Display SC",serif;letter-spacing:.35em;font-size:12px;color:var(--soft)}
-h1{font-family:"Playfair Display SC",serif;font-weight:700;font-size:clamp(34px,7vw,54px);margin:10px 0 4px;letter-spacing:.04em;line-height:1.05}
-.sub{font-style:italic;color:var(--soft);margin:0}
-.orn{color:var(--rule);font-size:22px;letter-spacing:.6em;margin:18px 0 6px;text-align:center}
-.tally{font-family:"Playfair Display SC",serif;font-size:13px;letter-spacing:.2em;color:var(--soft);text-align:center;margin:6px 0 0}
-.tools{display:flex;flex-direction:column;align-items:center;gap:14px;margin:26px 0 8px}
-.search{width:min(420px,100%);background:transparent;border:0;border-bottom:1px solid var(--rule);font:inherit;font-style:italic;
-  text-align:center;padding:6px 4px;color:var(--ink);outline:none}
-.search::placeholder{color:#9a876f}
-.courses{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px}
-.courses button{background:none;border:0;font-family:"Playfair Display SC",serif;font-size:14px;letter-spacing:.18em;color:var(--soft);
-  cursor:pointer;padding:4px 2px;border-bottom:1px solid transparent}
-.courses button[aria-pressed=true]{color:var(--wine);border-color:var(--wine)}
-section.course{margin-top:42px}
-h2{font-family:"Playfair Display SC",serif;text-align:center;font-size:28px;font-weight:400;letter-spacing:.12em;margin:0;color:var(--wine)}
-h2 small{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;letter-spacing:0;color:var(--soft);margin-top:2px}
-.flour{display:block;text-align:center;color:var(--rule);margin:6px 0 14px;letter-spacing:.4em}
-details.fac{margin:18px 0 0}
-details.fac>summary{list-style:none;cursor:pointer;text-align:center;font-family:"Playfair Display SC",serif;font-size:17px;letter-spacing:.14em;padding:6px 0}
-details.fac>summary::-webkit-details-marker{display:none}
-details.fac>summary .n{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:0;color:var(--soft);font-size:15px}
-details.fac>summary::after{content:" ❧";color:var(--rule)}
-details.fac[open]>summary::after{content:" ☙"}
-ul{list-style:none;margin:6px 0 4px;padding:0}
-li{display:flex;align-items:baseline;gap:8px;padding:3px 0}
-li .nm{flex:0 1 auto}
-li .dots{flex:1 1 auto;border-bottom:2px dotted #b9a27b;transform:translateY(-5px);min-width:24px}
-li .yr{flex:0 0 auto;font-variant-numeric:oldstyle-nums;font-weight:600}
-li .note{display:block;font-style:italic;font-size:15px;color:var(--soft)}
-li a{color:var(--wine);text-decoration:none;font-size:14px;font-style:italic;flex:0 0 auto}
-li a:hover{text-decoration:underline}
-.mark{font-size:12px;color:var(--wine);font-family:"Playfair Display SC",serif;letter-spacing:.12em;margin-left:6px}
-.empty{text-align:center;font-style:italic;color:var(--soft);margin-top:40px}
-footer{text-align:center;margin-top:48px;font-style:italic;color:var(--soft);font-size:15px}
-footer .mark{margin:0}
-@media (max-width:520px){body{font-size:17px;padding:12px 8px 40px}.menu{padding:44px 22px 48px}li a{display:none}}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:"Varela Round",system-ui,sans-serif;font-size:17px;line-height:1.45;padding:20px 16px 60px}
+.wrap{max-width:1180px;margin:0 auto}
+header{text-align:center;position:relative;padding:4px 0 6px}
+h1{font-family:"Caveat",cursive;font-size:clamp(40px,7vw,60px);margin:0;line-height:1;position:relative;z-index:1}
+.swoosh{display:block;margin:-14px auto 0;width:min(520px,90%);height:34px}
+.count{color:var(--soft);font-size:14px;margin:4px 0 0}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 12px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.toggles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.toggles button{font:inherit;font-size:15px;border:2px solid var(--chip);background:var(--chip);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.toggles button .n{color:var(--soft);font-size:13px;margin-left:4px}
+.toggles button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.toggles button[aria-pressed=true] .n{color:#fff;opacity:.85}
+.toggles button:disabled{opacity:.45;cursor:default}
+.search{display:block;margin:10px auto 0;width:min(380px,100%);font:inherit;font-size:15px;padding:8px 14px;border:2px solid var(--line);border-radius:999px;background:#fff;outline:none}
+.search:focus{border-color:var(--accent)}
+.cols{columns:3 300px;column-gap:40px}
+.game{break-before:column}
+.game:first-child{break-before:auto}
+h2{font-family:"Nunito",sans-serif;font-weight:800;font-size:22px;margin:0 0 4px;break-after:avoid}
+.fac{break-inside:avoid;margin:0 0 16px}
+.fac.big{break-inside:auto}
+h3{font-family:"Nunito",sans-serif;font-weight:800;font-size:18px;margin:0 0 2px;break-after:avoid}
+h3 .n{font-family:"Varela Round",sans-serif;font-weight:400;color:var(--soft);font-size:14px;margin-left:4px}
+ul{margin:0;padding:0 0 0 38px;list-style:none}
+li{position:relative;padding:1px 0}
+li::before{content:"";position:absolute;left:-20px;top:.62em;width:7px;height:7px;border:1.6px solid var(--ink);border-radius:50%}
+li a{color:inherit;text-decoration:none}
+li a:hover{color:var(--accent)}
+.meta{color:var(--soft);font-size:14px}
+.flag{font-size:11px;font-weight:700;letter-spacing:.04em;color:#b5650a;background:#fdf0dc;border-radius:4px;padding:0 5px;margin-left:5px;vertical-align:1px}
+.empty{text-align:center;color:var(--soft);margin:40px 0}
+footer{text-align:center;color:var(--soft);font-size:13px;margin-top:30px}
 </style>
 </head>
 <body>
-<main class="menu">
+<div class="wrap">
   <header>
-    <div class="est">EST. ON DRIVE T</div>
-    <h1>The Scan Library</h1>
-    <p class="sub">A bill of fare of scanned miniatures, served by game &amp; faction</p>
-    <div class="orn">✦ ✦ ✦</div>
-    <p class="tally" id="tally">Preparing the menu…</p>
+    <h1>Scan Library List</h1>
+    <svg class="swoosh" viewBox="0 0 520 34" aria-hidden="true"><path d="M8 26 C 120 6, 360 4, 470 12 S 520 22, 500 30" fill="none" stroke="#f0960e" stroke-width="7" stroke-linecap="round"/></svg>
+    <p class="count" id="count">Loading…</p>
   </header>
-  <div class="tools">
-    <input class="search" id="q" type="search" placeholder="Ask your server for a kit…" aria-label="Search scans">
-    <nav class="courses" id="courses" aria-label="Games"></nav>
+  <div class="bar">
+    <div class="toggles" id="toggles"></div>
+    <input class="search" id="q" type="search" placeholder="Search a kit or faction" aria-label="Search">
   </div>
-  <div id="list"></div>
-  <footer>
-    <div class="orn">❦</div>
-    Items marked <span class="mark">CHECK</span> or <span class="mark">COMPARE</span> are awaiting the chef's inspection.<br>
-    <span id="updated"></span>
-  </footer>
-</main>
+  <div class="cols" id="list"></div>
+  <footer><span class="flag">CHECK</span> / <span class="flag">COMPARE</span> = scan still being verified. Tap a name to see pictures. <span id="updated"></span></footer>
+</div>
 <script>
-const ORDER=["Warhammer 40K","Age of Sigmar","Kill Team","Horus Heresy"];
-const GAMEQ={"Warhammer 40K":"Warhammer 40k","Age of Sigmar":"Age of Sigmar","Kill Team":"Kill Team","Horus Heresy":"Horus Heresy"};
-const NUM=["","I","II","III","IV","V","VI","VII","VIII"];
-let items=[],game="All";
+const GAMES=["Warhammer 40K","Age of Sigmar","The Old World","Kill Team","Horus Heresy"];
+const SHORT={"Warhammer 40K":"40K","Age of Sigmar":"Age of Sigmar","The Old World":"The Old World","Kill Team":"Kill Team","Horus Heresy":"Horus Heresy"};
+const GAMEQ={"Warhammer 40K":"Warhammer 40k","The Old World":"Warhammer The Old World"};
+const FIX={"Chaos":"Chaos Space Marines","Emperors Children":"Emperor's Children","HH":""};
+let items=[],game=null;
 
-function parseCSV(t){
-  const rows=[];let row=[],f="",q=false;
+function parseCSV(t){const rows=[];let row=[],f="",q=false;
   for(let i=0;i<t.length;i++){const c=t[i];
     if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
     else if(c=='"')q=true;else if(c==','){row.push(f);f=""}
     else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);f="";if(row.some(x=>x))rows.push(row);row=[]}
     else f+=c}
-  if(f||row.length){row.push(f);rows.push(row)}
-  return rows;
-}
+  if(f||row.length){row.push(f);rows.push(row)}return rows}
 function clean(g,fac,raw){
   let n=raw.replace(/\.(zip|7z|rar|obj|stl|lys|chitubox)$/i,"").replace(/^\s*SCAN\s*-\s*/i,"");
   let mark="";const m=n.match(/\s*-\s*(CHECK|COMPARE)\s*$/i);if(m){mark=m[1].toUpperCase();n=n.slice(0,m.index)}
-  const FIX={"Chaos":"Chaos Space Marines","Emperors Children":"Emperor's Children","HH":""};
   let f=fac.replace(/^CSM - /,"");f=FIX[f]??f;
   const seg=n.split(" - ");
   if(seg.length>1){let pre=seg.shift();
-    if(["HH","SM","CSM"].includes(pre)&&seg.length>1&&!f){pre=seg.shift()}
+    if(["HH","SM","CSM"].includes(pre)&&seg.length>1&&!f)pre=seg.shift();
     if(!f)f=FIX[pre]??pre;
     if(seg.length>1&&seg[0].length<=4)seg.shift()}
   n=seg.join(" – ");
   let yr="";const y=n.match(/\((\d{4})\)\s*$/);if(y){yr=y[1];n=n.slice(0,y.index).trim()}
   let note="";const nt=n.match(/\(([^()]*)\)\s*$/);if(nt&&nt[1].length<40){note=nt[1];n=n.slice(0,nt.index).trim()}
   const ny=note.match(/^(\d{4}),\s*(.*)$/);if(ny&&!yr){yr=ny[1];note=ny[2]}
-  if(!f)f="House Specials";
-  return {g,f,n,yr,note,mark};
-}
-function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+  return {g,f:f||"Other",n,yr,note,mark}}
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
 function render(){
   const q=document.getElementById("q").value.trim().toLowerCase();
-  const shown=items.filter(i=>(game=="All"||i.g==game)&&(!q||(i.n+" "+i.f+" "+i.note).toLowerCase().includes(q)));
-  const games=ORDER.filter(g=>shown.some(i=>i.g==g)).concat([...new Set(shown.map(i=>i.g))].filter(g=>!ORDER.includes(g)));
+  const pool=items.filter(i=>(q||i.g==game)&&(!q||(i.n+" "+i.f+" "+i.note).toLowerCase().includes(q)));
+  const gs=GAMES.filter(g=>pool.some(i=>i.g==g)).concat([...new Set(pool.map(i=>i.g))].filter(g=>!GAMES.includes(g)));
   let h="";
-  games.forEach((g,gi)=>{
-    const gs=shown.filter(i=>i.g==g);
-    const facs=[...new Set(gs.map(i=>i.f))].sort();
-    h+=`<section class="course"><h2>${esc(g)}<small>Course ${NUM[gi+1]||gi+1} · ${gs.length} dishes</small></h2><span class="flour">~ ❦ ~</span>`;
-    facs.forEach(f=>{
-      const fs=gs.filter(i=>i.f==f).sort((a,b)=>a.n.localeCompare(b.n));
-      h+=`<details class="fac" open><summary>${esc(f)} <span class="n">(${fs.length})</span></summary><ul>`;
-      fs.forEach(i=>{
+  gs.forEach(g=>{
+    const gi=pool.filter(i=>i.g==g);
+    if(q)h+=`<div class="game"><h2>${esc(g)}:</h2></div>`;
+    [...new Set(gi.map(i=>i.f))].sort().forEach(f=>{
+      const fi=gi.filter(i=>i.f==f).sort((a,b)=>a.n.localeCompare(b.n));
+      h+=`<div class="fac${fi.length>18?" big":""}"><h3>${esc(f)}:<span class="n">${fi.length}</span></h3><ul>`;
+      fi.forEach(i=>{
         const url="https://www.google.com/search?tbm=isch&q="+encodeURIComponent((GAMEQ[g]||g)+" "+i.f+" "+i.n);
-        h+=`<li><span class="nm">${esc(i.n)}${i.mark?`<span class="mark">${i.mark}</span>`:""}${i.note?`<span class="note">${esc(i.note)}</span>`:""}</span><span class="dots"></span><span class="yr">${i.yr||"—"}</span><a href="${url}" target="_blank" rel="noopener">view</a></li>`;
-      });
-      h+=`</ul></details>`;
-    });
-    h+=`</section>`;
-  });
-  document.getElementById("list").innerHTML=h||`<p class="empty">The kitchen has nothing by that name tonight.</p>`;
+        const meta=[i.note,i.yr].filter(Boolean).join(", ");
+        h+=`<li><a href="${url}" target="_blank" rel="noopener">${esc(i.n)}</a>${meta?` <span class="meta">(${esc(meta)})</span>`:""}${i.mark?`<span class="flag">${i.mark}</span>`:""}</li>`});
+      h+=`</ul></div>`})});
+  document.getElementById("list").innerHTML=h||`<p class="empty">Nothing matches that.</p>`;
+  const n=pool.length;document.getElementById("count").textContent=q?`${n} matching scans across all games`:`${n} scans in ${game}`;
 }
-function courses(){
-  const gs=["All"].concat(ORDER.filter(g=>items.some(i=>i.g==g)));
-  document.getElementById("courses").innerHTML=gs.map(g=>`<button aria-pressed="${g==game}" data-g="${esc(g)}">${g=="All"?"Full Menu":esc(g)}</button>`).join("");
-  document.querySelectorAll("#courses button").forEach(b=>b.onclick=()=>{game=b.dataset.g;courses();render()});
+function toggles(){
+  document.getElementById("toggles").innerHTML=GAMES.map(g=>{const c=items.filter(i=>i.g==g).length;
+    return `<button data-g="${esc(g)}" aria-pressed="${g==game}"${c?"":" disabled"}>${SHORT[g]}<span class="n">${c||"soon"}</span></button>`}).join("");
+  document.querySelectorAll("#toggles button").forEach(b=>b.onclick=()=>{game=b.dataset.g;document.getElementById("q").value="";
+    try{localStorage.setItem("scan-game",game)}catch(e){}toggles();render()});
 }
-fetch("scans.csv?"+Date.now()).then(r=>{
-  const lm=r.headers.get("last-modified");
-  if(lm)document.getElementById("updated").textContent="Menu last updated "+new Date(lm).toLocaleDateString(undefined,{year:"numeric",month:"long",day:"numeric"})+".";
+fetch("scans.csv?"+Date.now()).then(r=>{const lm=r.headers.get("last-modified");
+  if(lm)document.getElementById("updated").textContent="Updated "+new Date(lm).toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})+".";
   return r.text()}).then(t=>{
-  const rows=parseCSV(t.replace(/^﻿/,""));rows.shift();
-  const seen=new Set();
-  rows.forEach(([g,f,n])=>{if(!n)return;const it=clean(g,f||"",n);const k=it.g+"|"+it.f+"|"+it.n+"|"+it.note+"|"+it.yr;if(!seen.has(k)){seen.add(k);items.push(it)}});
-  document.getElementById("tally").textContent=`${items.length} dishes · ${new Set(items.map(i=>i.g+i.f)).size} kitchens · ${new Set(items.map(i=>i.g)).size} courses`;
-  courses();render();
-}).catch(()=>{document.getElementById("tally").textContent="The menu could not be fetched."});
+  const rows=parseCSV(t.replace(/^﻿/,""));rows.shift();const seen=new Set();
+  rows.forEach(([g,f,n])=>{if(!n)return;const it=clean(g,f||"",n);const k=[it.g,it.f,it.n,it.note,it.yr].join("|");if(!seen.has(k)){seen.add(k);items.push(it)}});
+  let saved=null;try{saved=localStorage.getItem("scan-game")}catch(e){}
+  game=GAMES.find(g=>g==saved&&items.some(i=>i.g==g))||GAMES.find(g=>items.some(i=>i.g==g));
+  toggles();render();
+}).catch(()=>{document.getElementById("count").textContent="Couldn't load the scan list."});
 document.getElementById("q").addEventListener("input",render);
 </script>
 </body>
