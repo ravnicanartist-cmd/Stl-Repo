@@ -2,6 +2,65 @@
  "updated": "2026-11-20",
  "groups": [
   {
+   "group": "Edition Launch Boxes",
+   "boxes": [
+    {
+     "faction": "Space Marines",
+     "name": "Armageddon launch box (11th ed, 2026)",
+     "have": 8,
+     "total": 8,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Orks",
+     "name": "Armageddon launch box (11th ed, 2026)",
+     "have": 9,
+     "total": 9,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Stormcast Eternals",
+     "name": "Skaventide launch box (AoS 4th ed, 2024)",
+     "have": 7,
+     "total": 7,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Skaven",
+     "name": "Skaventide launch box (AoS 4th ed, 2024)",
+     "have": 7,
+     "total": 7,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Space Marines",
+     "name": "Leviathan launch box (10th ed, 2023)",
+     "have": 7,
+     "total": 8,
+     "missing": [
+      "Lieutenant with Combi-weapon"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Tyranids",
+     "name": "Leviathan launch box (10th ed, 2023)",
+     "have": 6,
+     "total": 9,
+     "missing": [
+      "Von Ryan's Leapers",
+      "Barbgaunts",
+      "Ripper Swarms"
+     ],
+     "partial": false
+    }
+   ]
+  },
+  {
    "group": "40K Battleforces",
    "boxes": [
     {
