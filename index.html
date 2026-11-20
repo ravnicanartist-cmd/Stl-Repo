@@ -98,16 +98,13 @@ function renderBoxes(q){
   const fit=b=>!q||(b.faction+" "+b.name+" "+b.missing.join(" ")).toLowerCase().includes(q);
   boxes.groups.forEach(gr=>{
     const known=gr.boxes.filter(b=>b.total&&fit(b)),unk=gr.boxes.filter(b=>!b.total&&fit(b));
-    if(!known.length&&!unk.length)return;
+    if(!known.some(b=>b.have>=b.total))return;
     const comp=known.filter(b=>b.have>=b.total),todo=known.filter(b=>b.have<b.total).sort((a,b)=>(a.total-a.have)-(b.total-b.have)||b.have-a.have);
     done+=comp.length;all+=known.length;
-    h+=`<div class="game"><h2>${esc(gr.group)}:</h2></div>`;
-    if(comp.length)h+=`<div class="fac${comp.length>18?" big":""}"><h3>Complete:<span class="n">${comp.length}</span></h3><ul>${comp.map(b=>`<li>${esc(b.faction)} – ${esc(b.name)}</li>`).join("")}</ul></div>`;
-    if(todo.length)h+=`<div class="fac big"><h3>Still missing kits:<span class="n">${todo.length}</span></h3><ul>${todo.map(b=>`<li>${esc(b.faction)} – ${esc(b.name)} <span class="meta">(${b.have} of ${b.total})</span><div class="meta">needs ${b.missing.map(esc).join(", ")}</div></li>`).join("")}</ul></div>`;
-    if(unk.length)h+=`<div class="fac"><h3>Contents not known yet:<span class="n">${unk.length}</span></h3><ul>${unk.map(b=>`<li class="meta">${esc(b.faction)} – ${esc(b.name)}</li>`).join("")}</ul></div>`;
+    h+=`<div class="fac${comp.length>18?" big":""}"><h3>${esc(gr.group)}:<span class="n">${comp.length}</span></h3><ul>${comp.map(b=>`<li>${esc(b.faction)} – ${esc(b.name)}</li>`).join("")}</ul></div>`;
   });
   document.getElementById("list").innerHTML=h||`<p class="empty">Nothing matches that.</p>`;
-  document.getElementById("count").textContent=`${done} of ${all} box sets complete (as of ${boxes.updated})`;
+  document.getElementById("count").textContent=`${done} complete box sets (as of ${boxes.updated})`;
 }
 function render(){
   if(game=="Box Sets")return renderBoxes(document.getElementById("q").value.trim().toLowerCase());
