@@ -40,6 +40,7 @@ li::before{content:"";position:absolute;left:-20px;top:.62em;width:7px;height:7p
 li a{color:inherit;text-decoration:none}
 li a:hover{color:var(--accent)}
 .meta{color:var(--soft);font-size:14px}
+div.meta{line-height:1.3;margin-bottom:3px}
 .flag{font-size:11px;font-weight:700;letter-spacing:.04em;color:#b5650a;background:#fdf0dc;border-radius:4px;padding:0 5px;margin-left:5px;vertical-align:1px}
 .empty{text-align:center;color:var(--soft);margin:40px 0}
 footer{text-align:center;color:var(--soft);font-size:13px;margin-top:30px}
@@ -54,10 +55,10 @@ footer{text-align:center;color:var(--soft);font-size:13px;margin-top:30px}
   </header>
   <div class="bar">
     <div class="toggles" id="toggles"></div>
-    <input class="search" id="q" type="search" placeholder="Search a kit or faction" aria-label="Search">
+    <input class="search" id="q" type="search" placeholder="Search a kit, faction or box" aria-label="Search">
   </div>
   <div class="cols" id="list"></div>
-  <footer><span class="flag">CHECK</span> / <span class="flag">COMPARE</span> = scan still being verified. Tap a name to see pictures. <span id="updated"></span></footer>
+  <footer>Tap a name to see pictures. <span id="updated"></span></footer>
 </div>
 <script>
 const GAMES=["Warhammer 40K","Age of Sigmar","The Old World","Kill Team","Horus Heresy"];
@@ -73,23 +74,43 @@ function parseCSV(t){const rows=[];let row=[],f="",q=false;
     else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);f="";if(row.some(x=>x))rows.push(row);row=[]}
     else f+=c}
   if(f||row.length){row.push(f);rows.push(row)}return rows}
+const CH={ALL:"All Chapters",BA:"Blood Angels",BT:"Black Templars",DA:"Dark Angels",SAL:"Salamanders",SW:"Space Wolves",UM:"Ultramarines",WS:"White Scars",IF:"Imperial Fists",IH:"Iron Hands",RG:"Raven Guard",DW:"Deathwatch"};
 function clean(g,fac,raw){
-  let n=raw.replace(/\.(zip|7z|rar|obj|stl|lys|chitubox)$/i,"").replace(/^\s*SCAN\s*-\s*/i,"");
-  let mark="";const m=n.match(/\s*-\s*(CHECK|COMPARE)\s*$/i);if(m){mark=m[1].toUpperCase();n=n.slice(0,m.index)}
+  let n=raw.replace(/\.(zip|7z|rar|obj|stl|lys|chitubox)$/i,"").replace(/^\s*SCAN\s*-\s*/i,"").replace(/\s*-\s*(CHECK|COMPARE)\s*$/i,"");
   let f=fac.replace(/^CSM - /,"");f=FIX[f]??f;
   const seg=n.split(" - ");
   if(seg.length>1){let pre=seg.shift();
     if(["HH","SM","CSM"].includes(pre)&&seg.length>1&&!f)pre=seg.shift();
     if(!f)f=FIX[pre]??pre;
-    if(seg.length>1&&seg[0].length<=4)seg.shift()}
+    if(seg.length>1&&seg[0].length<=4){const c=seg.shift();if(CH[c]&&/^Space Marines/.test(f))f="Space Marines: "+CH[c]}}
   n=seg.join(" – ");
-  let yr="";const y=n.match(/\((\d{4})\)\s*$/);if(y){yr=y[1];n=n.slice(0,y.index).trim()}
-  let note="";const nt=n.match(/\(([^()]*)\)\s*$/);if(nt&&nt[1].length<40){note=nt[1];n=n.slice(0,nt.index).trim()}
-  const ny=note.match(/^(\d{4}),\s*(.*)$/);if(ny&&!yr){yr=ny[1];note=ny[2]}
-  return {g,f:f||"Other",n,yr,note,mark}}
+  const toks=[];let m;
+  while((m=n.match(/\s*\(([^()]*)\)\s*$/))){toks.unshift(...m[1].split(/,\s*/));n=n.slice(0,m.index)}
+  let yr="";const keep=[];
+  toks.forEach(t=>{t=t.trim();if(/^\d{4}$/.test(t))yr=yr||t;else if(/^\d{1,2}$/.test(t)){}else if(t&&!keep.includes(t))keep.push(t)});
+  return {g,f:f||"Other",n:n.trim(),yr,note:keep.join(", ")}}
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+let boxes=null;
+function renderBoxes(q){
+  if(!boxes){document.getElementById("list").innerHTML=`<p class="empty">Loading box sets…</p>`;return}
+  let h="",done=0,all=0;
+  const fit=b=>!q||(b.faction+" "+b.name+" "+b.missing.join(" ")).toLowerCase().includes(q);
+  boxes.groups.forEach(gr=>{
+    const known=gr.boxes.filter(b=>b.total&&fit(b)),unk=gr.boxes.filter(b=>!b.total&&fit(b));
+    if(!known.length&&!unk.length)return;
+    const comp=known.filter(b=>b.have>=b.total),todo=known.filter(b=>b.have<b.total).sort((a,b)=>(a.total-a.have)-(b.total-b.have)||b.have-a.have);
+    done+=comp.length;all+=known.length;
+    h+=`<div class="game"><h2>${esc(gr.group)}:</h2></div>`;
+    if(comp.length)h+=`<div class="fac${comp.length>18?" big":""}"><h3>Complete:<span class="n">${comp.length}</span></h3><ul>${comp.map(b=>`<li>${esc(b.faction)} – ${esc(b.name)}</li>`).join("")}</ul></div>`;
+    if(todo.length)h+=`<div class="fac big"><h3>Still missing kits:<span class="n">${todo.length}</span></h3><ul>${todo.map(b=>`<li>${esc(b.faction)} – ${esc(b.name)} <span class="meta">(${b.have} of ${b.total})</span><div class="meta">needs ${b.missing.map(esc).join(", ")}</div></li>`).join("")}</ul></div>`;
+    if(unk.length)h+=`<div class="fac"><h3>Contents not known yet:<span class="n">${unk.length}</span></h3><ul>${unk.map(b=>`<li class="meta">${esc(b.faction)} – ${esc(b.name)}</li>`).join("")}</ul></div>`;
+  });
+  document.getElementById("list").innerHTML=h||`<p class="empty">Nothing matches that.</p>`;
+  document.getElementById("count").textContent=`${done} of ${all} box sets complete (as of ${boxes.updated})`;
+}
 function render(){
+  if(game=="Box Sets")return renderBoxes(document.getElementById("q").value.trim().toLowerCase());
   const q=document.getElementById("q").value.trim().toLowerCase();
   const pool=items.filter(i=>(q||i.g==game)&&(!q||(i.n+" "+i.f+" "+i.note).toLowerCase().includes(q)));
   const gs=GAMES.filter(g=>pool.some(i=>i.g==g)).concat([...new Set(pool.map(i=>i.g))].filter(g=>!GAMES.includes(g)));
@@ -103,14 +124,14 @@ function render(){
       fi.forEach(i=>{
         const url="https://www.google.com/search?tbm=isch&q="+encodeURIComponent((GAMEQ[g]||g)+" "+i.f+" "+i.n);
         const meta=[i.note,i.yr].filter(Boolean).join(", ");
-        h+=`<li><a href="${url}" target="_blank" rel="noopener">${esc(i.n)}</a>${meta?` <span class="meta">(${esc(meta)})</span>`:""}${i.mark?`<span class="flag">${i.mark}</span>`:""}</li>`});
+        h+=`<li><a href="${url}" target="_blank" rel="noopener">${esc(i.n)}</a>${meta?` <span class="meta">(${esc(meta)})</span>`:""}</li>`});
       h+=`</ul></div>`})});
   document.getElementById("list").innerHTML=h||`<p class="empty">Nothing matches that.</p>`;
   const n=pool.length;document.getElementById("count").textContent=q?`${n} matching scans across all games`:`${n} scans in ${game}`;
 }
 function toggles(){
   document.getElementById("toggles").innerHTML=GAMES.map(g=>{const c=items.filter(i=>i.g==g).length;
-    return `<button data-g="${esc(g)}" aria-pressed="${g==game}"${c?"":" disabled"}>${SHORT[g]}<span class="n">${c||"soon"}</span></button>`}).join("");
+    return `<button data-g="${esc(g)}" aria-pressed="${g==game}"${c?"":" disabled"}>${SHORT[g]}<span class="n">${c||"soon"}</span></button>`}).join("")+`<button data-g="Box Sets" aria-pressed="${game=="Box Sets"}">Box Sets</button>`;
   document.querySelectorAll("#toggles button").forEach(b=>b.onclick=()=>{game=b.dataset.g;document.getElementById("q").value="";
     try{localStorage.setItem("scan-game",game)}catch(e){}toggles();render()});
 }
@@ -120,10 +141,11 @@ fetch("scans.csv?"+Date.now()).then(r=>{const lm=r.headers.get("last-modified");
   const rows=parseCSV(t.replace(/^﻿/,""));rows.shift();const seen=new Set();
   rows.forEach(([g,f,n])=>{if(!n)return;const it=clean(g,f||"",n);const k=[it.g,it.f,it.n,it.note,it.yr].join("|");if(!seen.has(k)){seen.add(k);items.push(it)}});
   let saved=null;try{saved=localStorage.getItem("scan-game")}catch(e){}
-  game=GAMES.find(g=>g==saved&&items.some(i=>i.g==g))||GAMES.find(g=>items.some(i=>i.g==g));
+  game=(saved=="Box Sets"?saved:null)||GAMES.find(g=>g==saved&&items.some(i=>i.g==g))||GAMES.find(g=>items.some(i=>i.g==g));
   toggles();render();
 }).catch(()=>{document.getElementById("count").textContent="Couldn't load the scan list."});
 document.getElementById("q").addEventListener("input",render);
+fetch("boxes.json?"+Date.now()).then(r=>r.json()).then(j=>{boxes=j;if(game=="Box Sets")render()}).catch(()=>{});
 </script>
 </body>
 </html>

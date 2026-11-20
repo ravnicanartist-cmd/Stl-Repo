@@ -1,0 +1,1131 @@
+{
+ "updated": "2026-11-20",
+ "groups": [
+  {
+   "group": "40K Battleforces",
+   "boxes": [
+    {
+     "faction": "Space Marines",
+     "name": "Indomitus Task Force (Christmas 2026)",
+     "have": 5,
+     "total": 6,
+     "missing": [
+      "Redemptor Dreadnought"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Adepta Sororitas",
+     "name": "Penitent Crusade Host (2024)",
+     "have": 4,
+     "total": 5,
+     "missing": [
+      "Sororitas Rhino"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Astra Militarum",
+     "name": "Krieg Siege Platoon (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Tyranids",
+     "name": "Crusher Stampede (2025)",
+     "have": 4,
+     "total": 5,
+     "missing": [
+      "Tyrannofex"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Blood Angels",
+     "name": "Angelus Assault Force (Christmas 2026)",
+     "have": 4,
+     "total": 6,
+     "missing": [
+      "Death Company Brutalis Dreadnought",
+      "Death Company Marines with Jump Packs"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Chaos Space Marines",
+     "name": "Cult of Destruction (Christmas 2026)",
+     "have": 4,
+     "total": 6,
+     "missing": [
+      "Warpsmith",
+      "Venomcrawler"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "World Eaters",
+     "name": "Khorne Daemonkin (2026)",
+     "have": 3,
+     "total": 5,
+     "missing": [
+      "Lord on Juggernaut",
+      "Bloodletters"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Necrons",
+     "name": "Necron Host (2026)",
+     "have": 4,
+     "total": 6,
+     "missing": [
+      "Catacomb Command Barge",
+      "Flayed Ones"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Space Marines",
+     "name": "Iron Halo Strike Force (2025)",
+     "have": 4,
+     "total": 6,
+     "missing": [
+      "Hellblaster Squad",
+      "Redemptor Dreadnought"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Tyranids",
+     "name": "Tyranid Swarm (2026)",
+     "have": 4,
+     "total": 6,
+     "missing": [
+      "Von Ryan's Leapers",
+      "Hormagaunts"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Astra Militarum",
+     "name": "Astra Militarum Platoon (2026)",
+     "have": 3,
+     "total": 6,
+     "missing": [
+      "Commissar",
+      "Field Ordnance Battery",
+      "Basilisk"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Chaos Space Marines",
+     "name": "Chaos Space Marines Warband (2026)",
+     "have": 2,
+     "total": 5,
+     "missing": [
+      "Lord Discordant on Helstalker",
+      "Venomcrawler",
+      "Legionaries"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "T'au Empire",
+     "name": "Farsight Cadre (2025)",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Riptide Battlesuit",
+      "Broadside Battlesuits",
+      "Crisis Battlesuits"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Chaos Space Marines",
+     "name": "Hellforged Warband (2025)",
+     "have": 2,
+     "total": 6,
+     "missing": [
+      "Lord Discordant on Helstalker",
+      "Venomcrawler",
+      "Legionaries",
+      "Chaos Rhino"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Orks",
+     "name": "Armoured Blitzmob (Christmas 2026)",
+     "have": 1,
+     "total": 5,
+     "missing": [
+      "Warboss in Mega Armour",
+      "Battlewagon",
+      "Deff Dread",
+      "Meganobz"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Leagues of Votann",
+     "name": "Cthonian Prospect (2025)",
+     "have": 1,
+     "total": 5,
+     "missing": [
+      "Brôkhyr Iron-master",
+      "Brôkhyr Thunderkyn",
+      "Cthonian Earthshakers",
+      "Cthonian Beserks"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Dark Angels",
+     "name": "Inner Circle Task Force (2024)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Death Guard",
+     "name": "Vile Vectorium (2026)",
+     "have": 5,
+     "total": 5,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Emperor's Children",
+     "name": "Lords of Excess (2026)",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Emperor's Children",
+     "name": "Blissbound Warband (2025)",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Necrons",
+     "name": "Hypercrypt Legion (2024)",
+     "have": 5,
+     "total": 5,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Necrons",
+     "name": "Disciples of the Nekrosor (Christmas 2026)",
+     "have": 6,
+     "total": 6,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Thousand Sons",
+     "name": "Sekhmet Coven (2026)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Space Wolves",
+     "name": "Champions of Fenris (Christmas 2026)",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "T'au Empire",
+     "name": "Retaliation Cadre (2024)",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    }
+   ]
+  },
+  {
+   "group": "40K Combat Patrols",
+   "boxes": [
+    {
+     "faction": "Death Guard",
+     "name": "Combat Patrol (Apr 2025)",
+     "have": 4,
+     "total": 5,
+     "missing": [
+      "Chaos Rhino"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Blood Angels",
+     "name": "Combat Patrol: The Sanguinary Spearhead (2024)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Iron Hands",
+     "name": "Combat Patrol (2025)",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Space Wolves",
+     "name": "Combat Patrol (2025)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Wulfen",
+      "Blood Claws"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Orks",
+     "name": "Combat Patrol: Morgrim's Butchas (2024)",
+     "have": 2,
+     "total": 3,
+     "missing": [
+      "Beastboss"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "T'au Empire",
+     "name": "Combat Patrol: Sudden Dawn Cadre (2024)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Commander in Enforcer / Coldstar Battlesuit",
+      "Devilfish"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Grey Knights",
+     "name": "Combat Patrol (2025)",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Strike Squad",
+      "Brotherhood Terminators / Paladins",
+      "Venerable Dreadnought"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Drukhari",
+     "name": "Combat Patrol (2025)",
+     "have": 0,
+     "total": 3,
+     "missing": [
+      "Haemonculus",
+      "Wracks",
+      "Talos / Cronos"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Raven Guard",
+     "name": "Combat Patrol (2025)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Infiltrators / Incursors",
+      "Invictor Tactical Warsuit"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Genestealer Cults",
+     "name": "Combat Patrol: Claw of Ascension (2024)",
+     "have": 0,
+     "total": 4,
+     "missing": [
+      "Jackal Alphus",
+      "Atalan Jackals",
+      "Hybrid Metamorphs / Acolyte Hybrids",
+      "Achilles Ridgerunner"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Imperial Fists",
+     "name": "Combat Patrol (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Thousand Sons",
+     "name": "Combat Patrol (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Emperor's Children",
+     "name": "Combat Patrol: Callous Blades (2025)",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Death Korps of Krieg",
+     "name": "Combat Patrol (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Aeldari",
+     "name": "Combat Patrol (2025)",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Spiritseer",
+      "Warp Spiders",
+      "Dire Avengers"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Imperial Agents",
+     "name": "Combat Patrol: Inquisitor's Hand (2024)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Eversor Assassin",
+      "Vigilant Squad (Adeptus Arbites)"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Dark Angels",
+     "name": "Combat Patrol: Vengeful Brethren (2024)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Captain in Gravis Armour",
+      "Hellblasters"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Adepta Sororitas",
+     "name": "Combat Patrol: Sanctuary Guardians (2024)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Chaos Space Marines",
+     "name": "Combat Patrol: Zarkan's Daemonkin (2024)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Possessed",
+      "Legionaries"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Ultramarines",
+     "name": "Combat Patrol (2025)",
+     "have": 5,
+     "total": 5,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Salamanders",
+     "name": "Combat Patrol (2025)",
+     "have": 3,
+     "total": 5,
+     "missing": [
+      "Adrax Agatone",
+      "Invader ATV"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "World Eaters",
+     "name": "Combat Patrol: Frenzied Reavers (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "White Scars",
+     "name": "Combat Patrol (2025)",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Astra Militarum",
+     "name": "Combat Patrol: Drayden's Lance (2025)",
+     "have": 1,
+     "total": 3,
+     "missing": [
+      "Kasrkin",
+      "Attilan Rough Riders"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Tyranids",
+     "name": "Combat Patrol: Tyranid Assault Brood (2025)",
+     "have": 3,
+     "total": 4,
+     "missing": [
+      "Biovore / Pyrovore + Spore Mines"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Black Templars",
+     "name": "Combat Patrol (2025)",
+     "have": 3,
+     "total": 4,
+     "missing": [
+      "Sword Brethren"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Harlequins",
+     "name": "Combat Patrol (2025)",
+     "have": 0,
+     "total": 4,
+     "missing": [
+      "Troupe",
+      "Skyweavers",
+      "Starweaver / Voidweaver",
+      "Solitaire"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Leagues of Votann",
+     "name": "Combat Patrol (2025)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Brôkhyr Thunderkyn",
+      "Hearthkyn Warriors"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Chaos Daemons",
+     "name": "Combat Patrol: Butchers of Hyporia",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Bloodletters",
+      "Flesh Hounds"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Deathwatch",
+     "name": "Combat Patrol: Vigil Force Alphion (2020)",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Primaris Lieutenant",
+      "Primaris Apothecary"
+     ],
+     "partial": false
+    }
+   ]
+  },
+  {
+   "group": "AoS Spearheads",
+   "boxes": [
+    {
+     "faction": "Disciples of Tzeentch",
+     "name": "Tzaangor Warflock",
+     "have": 3,
+     "total": 4,
+     "missing": [
+      "Tzaangors"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Idoneth Deepkin",
+     "name": "Akhelian Tide Guard",
+     "have": 3,
+     "total": 4,
+     "missing": [
+      "Akhelian King"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Skaven",
+     "name": "Warpspark Clawpack",
+     "have": 3,
+     "total": 4,
+     "missing": [
+      "Warp Lightning Cannon"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Blades of Khorne",
+     "name": "Fangs of the Blood God",
+     "have": 2,
+     "total": 3,
+     "missing": [
+      "Flesh Hounds"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Stormcast Eternals",
+     "name": "Yndrasta's Spearhead",
+     "have": 3,
+     "total": 5,
+     "missing": [
+      "Stormstrike Chariot",
+      "Vanquishers"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Seraphon",
+     "name": "Sunblooded Prowlers",
+     "have": 3,
+     "total": 5,
+     "missing": [
+      "Sunblood Pack",
+      "Spawn of Chotec"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Ironjawz",
+     "name": "Ironjawz Bigmob",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Megaboss",
+      "Brutes"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Maggotkin of Nurgle",
+     "name": "Bleak Host",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Spoilpox Scrivener",
+      "Pusgoyle Blightlords"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Slaves to Darkness",
+     "name": "Bloodwind Legion",
+     "have": 2,
+     "total": 4,
+     "missing": [
+      "Chaos Chariot",
+      "Chaos Lord on Daemonic Mount"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Ossiarch Bonereapers",
+     "name": "Kavalos Vanguard",
+     "have": 1,
+     "total": 3,
+     "missing": [
+      "Liege-Kavalos",
+      "Teratic Cohort"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Daughters of Khaine",
+     "name": "Heartflayer Troupe",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Doomfire Warlocks",
+      "Melusai Ironscale",
+      "Witch Aelves"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Flesh-eater Courts",
+     "name": "Carrion Retainers",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Cryptguard",
+      "Morbheg Knights",
+      "Abhorrant Archregent"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Gloomspite Gitz",
+     "name": "Snarlpack Huntaz",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Snarlboss",
+      "Sunsteala Wheelas",
+      "Wolfgit Retinue"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Nighthaunt",
+     "name": "Slasher Host",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Knight of Shrouds",
+      "Spirit Hosts",
+      "Grimghast Reapers"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Ogor Mawtribes",
+     "name": "Mawseeker Mob",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Butcher",
+      "Cleavers",
+      "Gutseers"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Slaves to Darkness",
+     "name": "Darkoath Raiders",
+     "have": 1,
+     "total": 4,
+     "missing": [
+      "Darkoath Fellriders",
+      "Darkoath Warqueen",
+      "Darkoath Marauders"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Nighthaunt",
+     "name": "Cursed Shacklehorde",
+     "have": 1,
+     "total": 5,
+     "missing": [
+      "Chainghasts",
+      "Dreadscythe Harridans",
+      "Spirit Torment",
+      "Bladegheist Revenants"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Cities of Sigmar",
+     "name": "Castelite Company",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Cities of Sigmar",
+     "name": "Fusil-Platoon",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Cities of Sigmar",
+     "name": "Zenestra's Zealots",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Gloomspite Gitz",
+     "name": "Bad Moon Madmob",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Helsmiths of Hashut",
+     "name": "Helforge Host",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Idoneth Deepkin",
+     "name": "Soulraid Hunt",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Seraphon",
+     "name": "Starscale Warhost",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Skaven",
+     "name": "Crixxit's Kill-Pack",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Skaven",
+     "name": "Gnawfeast Clawpack",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Sons of Behemat",
+     "name": "Wallsmasher Stomp",
+     "have": 1,
+     "total": 1,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Soulblight Gravelords",
+     "name": "Deathrattle Tomb Host",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Soulblight Gravelords",
+     "name": "Bloodcrave Hunt",
+     "have": 3,
+     "total": 3,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Stormcast Eternals",
+     "name": "Vigilant Brotherhood",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Sylvaneth",
+     "name": "Bitterbark Copse",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Sylvaneth",
+     "name": "Spitewing Flight",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "Ossiarch Bonereapers",
+     "name": "Tithe-reaper Echelon",
+     "have": 4,
+     "total": 4,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Bloodbound Gore Pilgrims",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Khainite Shadow Coven",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Fluxblade Coven",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Charnel Watch",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Saga Axeband",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Blades of the Lurid Dream",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Epicurean Revellers",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Grundstok Trailblazers",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Skyhammer Task Force",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Swampskulka Gang",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Glittering Phalanx",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Hurakan Vanguard",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Bubonic Cell",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Scrapglutt",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Tyrant's Bellow",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Warglutt Marauders",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Mortisan Elite",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    },
+    {
+     "faction": "",
+     "name": "Stone Lobbas",
+     "have": 0,
+     "total": null,
+     "missing": [],
+     "partial": false
+    }
+   ]
+  },
+  {
+   "group": "The Old World",
+   "boxes": [
+    {
+     "faction": "Tomb Kings of Khemri",
+     "name": "Host of Nehekhara wave (Sep–Oct 2026)",
+     "have": 0,
+     "total": 4,
+     "missing": [
+      "Skeleton Warriors (2026)",
+      "Skeleton Archers (2026)",
+      "Skeleton Chariots (2026)",
+      "Skeleton Horsemen (2026)"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Tomb Kings of Khemri",
+     "name": "Plastic heroes (Jul 2025)",
+     "have": 0,
+     "total": 2,
+     "missing": [
+      "Royal Heralds",
+      "Liche Priests"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Tomb Kings of Khemri",
+     "name": "Launch plastics (Jan–Mar 2024)",
+     "have": 0,
+     "total": 6,
+     "missing": [
+      "Necrolith Bone Dragon",
+      "Tomb Guard",
+      "Sepulchral Stalkers / Necropolis Knights",
+      "Necrosphinx / Warsphinx",
+      "Settra the Imperishable",
+      "Tomb King on Skeleton Chariot"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Warriors of Chaos",
+     "name": "2024 plastic range (Sep–Oct 2024)",
+     "have": 0,
+     "total": 10,
+     "missing": [
+      "Chaos Warriors",
+      "Chaos Knights",
+      "Chaos Chariot / Gorebeast Chariot",
+      "Chaos Lord on Manticore",
+      "Chimera",
+      "Dragon Ogres",
+      "Chaos Sorcerer Lord",
+      "Chaos Marauders",
+      "Chaos Marauder Horsemen",
+      "Chaos Warhounds"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Kingdom of Bretonnia",
+     "name": "Launch range (Jan 2024)",
+     "have": 0,
+     "total": 10,
+     "missing": [
+      "Knights of the Realm on Foot",
+      "Knights of the Realm / Knights Errant",
+      "Men-at-Arms",
+      "Peasant Bowmen",
+      "Mounted Yeomen",
+      "Pegasus Knights",
+      "Grail Knights",
+      "Questing Knights",
+      "Bretonnian Lord on Warhorse",
+      "Field Trebuchet"
+     ],
+     "partial": false
+    },
+    {
+     "faction": "Orc & Goblin Tribes",
+     "name": "2024 release (Mar 2024)",
+     "have": 0,
+     "total": 3,
+     "missing": [
+      "Orc Boyz Mob",
+      "Orc Bosses",
+      "Orc Boar Chariots"
+     ],
+     "partial": false
+    }
+   ]
+  }
+ ]
+}
