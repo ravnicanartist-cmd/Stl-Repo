@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scan Library List</title>
+<title>Kit Library List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Nunito:wght@700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@ footer{text-align:center;color:var(--soft);font-size:13px;margin-top:30px}
 <body>
 <div class="wrap">
   <header>
-    <h1>Scan Library List</h1>
+    <h1>Kit Library List</h1>
     <svg class="swoosh" viewBox="0 0 520 34" aria-hidden="true"><path d="M8 26 C 120 6, 360 4, 470 12 S 520 22, 500 30" fill="none" stroke="#f0960e" stroke-width="7" stroke-linecap="round"/></svg>
     <p class="count" id="count">Loading…</p>
   </header>
@@ -124,7 +124,7 @@ function render(){
         h+=`<li><a href="${url}" target="_blank" rel="noopener">${esc(i.n)}</a>${meta?` <span class="meta">(${esc(meta)})</span>`:""}</li>`});
       h+=`</ul></div>`})});
   document.getElementById("list").innerHTML=h||`<p class="empty">Nothing matches that.</p>`;
-  const n=pool.length;document.getElementById("count").textContent=q?`${n} matching scans across all games`:`${n} scans in ${game}`;
+  const n=pool.length;document.getElementById("count").textContent=q?`${n} matching kits across all games`:`${n} kits in ${game}`;
 }
 function toggles(){
   document.getElementById("toggles").innerHTML=GAMES.map(g=>{const c=items.filter(i=>i.g==g).length;
@@ -140,7 +140,7 @@ fetch("scans.csv?"+Date.now()).then(r=>{const lm=r.headers.get("last-modified");
   let saved=null;try{saved=localStorage.getItem("scan-game")}catch(e){}
   game=(saved=="Box Sets"?saved:null)||GAMES.find(g=>g==saved&&items.some(i=>i.g==g))||GAMES.find(g=>items.some(i=>i.g==g));
   toggles();render();
-}).catch(()=>{document.getElementById("count").textContent="Couldn't load the scan list."});
+}).catch(()=>{document.getElementById("count").textContent="Couldn't load the kit list."});
 document.getElementById("q").addEventListener("input",render);
 fetch("boxes.json?"+Date.now()).then(r=>r.json()).then(j=>{boxes=j;if(game=="Box Sets")render()}).catch(()=>{});
 </script>
