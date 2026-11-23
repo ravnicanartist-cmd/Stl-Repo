@@ -80,7 +80,7 @@ function clean(g,fac,raw){
   let f=fac.replace(/^CSM - /,"");f=FIX[f]??f;
   const seg=n.split(" - ");
   if(seg.length>1){let pre=seg.shift();
-    if(["HH","SM","CSM"].includes(pre)&&seg.length>1&&!f)pre=seg.shift();
+    if(["HH","SM","CSM","TOW"].includes(pre)&&seg.length>1&&!f)pre=seg.shift();
     if(!f)f=FIX[pre]??pre;
     if(seg.length>1&&seg[0].length<=4){const c=seg.shift();if(CH[c]&&/^Space Marines/.test(f))f="Space Marines: "+CH[c]}}
   n=seg.join(" – ");

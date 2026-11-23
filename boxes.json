@@ -1120,10 +1120,9 @@
     {
      "faction": "Tomb Kings of Khemri",
      "name": "Launch plastics (Jan–Mar 2024)",
-     "have": 0,
+     "have": 1,
      "total": 6,
      "missing": [
-      "Necrolith Bone Dragon",
       "Tomb Guard",
       "Sepulchral Stalkers / Necropolis Knights",
       "Necrosphinx / Warsphinx",
@@ -1154,10 +1153,9 @@
     {
      "faction": "Kingdom of Bretonnia",
      "name": "Launch range (Jan 2024)",
-     "have": 0,
+     "have": 1,
      "total": 10,
      "missing": [
-      "Knights of the Realm on Foot",
       "Knights of the Realm / Knights Errant",
       "Men-at-Arms",
       "Peasant Bowmen",
