@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-22",
  "groups": [
   {
    "group": "Edition Launch Boxes",
@@ -49,10 +49,9 @@
     {
      "faction": "Tyranids",
      "name": "Leviathan launch box (10th ed, 2023)",
-     "have": 6,
+     "have": 7,
      "total": 9,
      "missing": [
-      "Von Ryan's Leapers",
       "Barbgaunts",
       "Ripper Swarms"
      ],
@@ -159,10 +158,9 @@
     {
      "faction": "Tyranids",
      "name": "Tyranid Swarm (2026)",
-     "have": 4,
+     "have": 5,
      "total": 6,
      "missing": [
-      "Von Ryan's Leapers",
       "Hormagaunts"
      ],
      "partial": false
