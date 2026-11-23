@@ -1133,18 +1133,15 @@
     },
     {
      "faction": "Warriors of Chaos",
-     "name": "2024 plastic range (Sep–Oct 2024)",
-     "have": 0,
+     "name": "Plastic range",
+     "have": 3,
      "total": 10,
      "missing": [
-      "Chaos Warriors",
-      "Chaos Knights",
       "Chaos Chariot / Gorebeast Chariot",
       "Chaos Lord on Manticore",
       "Chimera",
       "Dragon Ogres",
       "Chaos Sorcerer Lord",
-      "Chaos Marauders",
       "Chaos Marauder Horsemen",
       "Chaos Warhounds"
      ],
