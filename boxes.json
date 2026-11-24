@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22",
+ "updated": "2026-11-24",
  "groups": [
   {
    "group": "Edition Launch Boxes",
@@ -168,10 +168,9 @@
     {
      "faction": "Astra Militarum",
      "name": "Astra Militarum Platoon (2026)",
-     "have": 3,
+     "have": 4,
      "total": 6,
      "missing": [
-      "Commissar",
       "Field Ordnance Battery",
       "Basilisk"
      ],
