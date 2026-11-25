@@ -711,11 +711,10 @@
     {
      "faction": "Slaves to Darkness",
      "name": "Bloodwind Legion",
-     "have": 2,
+     "have": 3,
      "total": 4,
      "missing": [
-      "Chaos Chariot",
-      "Chaos Lord on Daemonic Mount"
+      "Chaos Chariot"
      ],
      "partial": false
     },
